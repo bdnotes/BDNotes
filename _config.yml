@@ -21,4 +21,3 @@ baseurl: "/BDNotes" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 theme: jekyll-theme-cayman
-gems: ['jekyll-less']
