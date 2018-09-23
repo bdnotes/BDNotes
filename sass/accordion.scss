@@ -1,17 +1,20 @@
+---
+---
+
 // ACCORDION
 // ---------
 
 
 // Parent container
 .accordion {
-  margin-bottom: $baseLineHeight;
+  margin-bottom: 50;
 }
 
 // Group == heading + body
 .accordion-group {
   margin-bottom: 2px;
   border: 1px solid #e5e5e5;
-  @include border-radius(4px);
+  border-radius: 4px;
 }
 .accordion-heading {
   border-bottom: 0;

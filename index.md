@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<link rel="stylesheet" src="/BDNotes/sass/accordion.css">
 
 [FCS Notes for placeholder](/FCS/placeholder.txt)
 
