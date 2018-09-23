@@ -4,5 +4,5 @@
 
 layout: home
 ---
-[ADSA Notes](/BDNotes/ADSA/placeholder.txt)
+[ADSA Notes](/ADSA/placeholder.txt)
 [ADSB Notes](/ADSB/placeholder.txt)
