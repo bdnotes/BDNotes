@@ -29,7 +29,7 @@ def write_accordioning():
                 full = os.path.join(root, dir_)
                 if not full.startswith(("./.", "./_")) and dir_ != 'sass' and full.count("/") < 2:
                     print(dir_, full)
-                    tag = '<div class="accordion accordion-group"><span class="accordion-heading accordion-toggle">{0}'.format(dir_)
+                    tag = '<div class="accordion accordion-group"><span class="accordion-heading accordion-toggle">{0}</span>'.format(dir_)
                     for root2, subdirs, subfiles in os.walk(dir_):
                         for file in subfiles:
                             full = os.path.join(root2, file)
