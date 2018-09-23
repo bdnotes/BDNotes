@@ -1,11 +1,11 @@
 import os
-
+extensions=('pdf', 'doc', 'txt', 'md', 'png', 'jpg')
 def clear_index():
     with open("index.md", "w"):
         pass
 
 
-def find_all_notes(extensions=('pdf', 'doc', 'txt', 'md', 'png', 'jpg')):
+def find_all_notes():
     for root, dirs, files in os.walk("."):
         for file in files:
             full = os.path.join(root, file)
@@ -22,5 +22,21 @@ def write_all_file_links_to_index():
             noteName, _ = noteName.split(".")
             index.write("[{0} Notes for {1}]({2})\n\n".format(class_, noteName, file))
 
-print(list(find_all_notes()))
+def write_accordioning():
+    with open("_includes/accordions.html", "w") as index:
+        for root, dirs, files in os.walk("."):
+            for dir_ in dirs:
+                full = os.path.join(root, dir_)
+                if not full.startswith(("./.", "./_")) and dir_ != 'sass' and full.count("/") < 2:
+                    print(dir_, full)
+                    tag = '<div class="accordion accordion-group"><span class="accordion-heading accordion-toggle">{0}'.format(dir_)
+                    for root2, subdirs, subfiles in os.walk(dir_):
+                        for file in subfiles:
+                            full = os.path.join(root2, file)
+                            _, class_, name = full.split("/")
+                            for_, _ = name.split(".")
+                            tag += '<a href="/BDNotes/{0}/{1}" class="accordion-inner">{0} notes for {2}</a>'.format(class_, name, for_)
+                    tag += '</div>'
+                    index.write(tag + "\n")
+write_accordioning()                  
 # write_all_file_links_to_index()
