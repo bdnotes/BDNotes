@@ -24,15 +24,6 @@ def write_all_file_links_to_index():
 
 def write_accordioning():
     with open("_includes/accordions.html", "w") as index:
-        index.write("""
- <script>
-      $(function() {
-        $( "#accordion" ).accordion({
-          collapsible: true,
-          active: false
-        });
-      });
-    </script>""")
         for root, dirs, files in os.walk("."):
             for dir_ in dirs:
                 full = os.path.join(root, dir_)
