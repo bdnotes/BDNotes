@@ -20,4 +20,4 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/BDNotes" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-theme: jekyll-theme-slate
+theme: jekyll-theme-cayman
