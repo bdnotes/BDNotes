@@ -1,5 +1,6 @@
 ---
 layout: default
+include: _less/accordion.less
 ---
 [FCS Notes for placeholder](/FCS/placeholder.txt)
 
