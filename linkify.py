@@ -27,7 +27,7 @@ def write_accordioning():
         index.write("""
  <script>
       $(function() {
-        $( ".accordion" ).accordion({
+        $( "#accordion" ).accordion({
           collapsible: true,
           active: false
         });
@@ -38,14 +38,14 @@ def write_accordioning():
                 full = os.path.join(root, dir_)
                 if not full.startswith(("./.", "./_")) and dir_ != 'sass' and full.count("/") < 2:
                     print(dir_, full)
-                    tag = '<div class="accordion"><h3>{0}</h3><ul>'.format(dir_)
+                    tag = '<div id="accordion"><h3>{0}</h3><ul>'.format(dir_)
                     for root2, subdirs, subfiles in os.walk(dir_):
                         for file in subfiles:
                             full = os.path.join(root2, file)
                             _, class_, name = full.split("/")
                             for_, _ = name.split(".")
                             print(full)
-                            tag += '<li><a href="/BDNotes/{0}" class="accordion-inner">{1} notes for {2}</a></li>'.format(full, class_, for_)
+                            tag += '<li><a href="/BDNotes/{0}">{1} notes for {2}</a></li>'.format(full, class_, for_)
                     tag += '</ul></div>'
                     index.write(tag + "\n")
 write_accordioning()                  
