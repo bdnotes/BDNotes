@@ -28,5 +28,5 @@ layout: default
 
 [NSL Notes for placeholder](/Humanities/NSL/placeholder.txt)
 
-
+{% include accordions.html %}
 
