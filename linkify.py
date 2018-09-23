@@ -20,7 +20,7 @@ def write_all_file_links_to_index():
         for file in find_all_notes():
             _, class_, noteName = file.split("/")
             noteName, _ = noteName.split(".")
-            index.write(f"[{class_} Notes for {noteName}]({file})\n\n")
+            index.write("[{0} Notes for {1}]({2})\n\n".format(class_, noteName, file))
 
-
-write_all_file_links_to_index()
+print(list(find_all_notes()))
+# write_all_file_links_to_index()
