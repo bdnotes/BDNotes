@@ -1,7 +1,7 @@
 ---
-layout: default
-include: _less/accordion.less
+layout: index
 ---
+
 [FCS Notes for placeholder](/FCS/placeholder.txt)
 
 [ADSA Notes for placeholder](/ADSA/placeholder.txt)
