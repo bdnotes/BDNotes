@@ -24,19 +24,31 @@ def write_all_file_links_to_index():
 
 def write_accordioning():
     with open("_includes/accordions.html", "w") as index:
+        index.write("""
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+ <script>
+      $(function() {
+        $( ".accordion" ).accordion({
+          collapsible: true,
+          active: false
+        });
+      });
+    </script>""")
         for root, dirs, files in os.walk("."):
             for dir_ in dirs:
                 full = os.path.join(root, dir_)
                 if not full.startswith(("./.", "./_")) and dir_ != 'sass' and full.count("/") < 2:
                     print(dir_, full)
-                    tag = '<div class="accordion accordion-group"><span class="accordion-heading accordion-toggle">{0}</span>'.format(dir_)
+                    tag = '<div class="accordion"><h3>{0}</h3><ul>'.format(dir_)
                     for root2, subdirs, subfiles in os.walk(dir_):
                         for file in subfiles:
                             full = os.path.join(root2, file)
                             _, class_, name = full.split("/")
                             for_, _ = name.split(".")
-                            tag += '<a href="/BDNotes/{0}/{1}" class="accordion-inner">{0} notes for {2}</a>'.format(class_, name, for_)
-                    tag += '</div>'
+                            print(full)
+                            tag += '<li><a href="/BDNotes/{0}" class="accordion-inner">{1} notes for {2}</a></li>'.format(full, class_, for_)
+                    tag += '</ul></div>'
                     index.write(tag + "\n")
 write_accordioning()                  
 # write_all_file_links_to_index()
