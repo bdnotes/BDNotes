@@ -25,8 +25,6 @@ def write_all_file_links_to_index():
 def write_accordioning():
     with open("_includes/accordions.html", "w") as index:
         index.write("""
- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
- <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
  <script>
       $(function() {
         $( ".accordion" ).accordion({
