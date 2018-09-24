@@ -36,7 +36,7 @@ def write_accordioning():
                             _, class_, name = full.split("/")
                             for_, _ = name.split(".")
                             print(full)
-                            tag += '<li><a href="/BDNotes/{0}">{1} notes for {2}</a></li>'.format(full, class_, for_)
+                            tag += '<li><a href="{0}">{1} notes for {2}</a></li>'.format(full, class_, for_)
                     tag += '</ul></div>'
                     index.write(tag + "\n")
 write_accordioning()                  
