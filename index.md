@@ -31,4 +31,4 @@ layout: default
 
 {% include accordions.html %}
 
-[About BDNotes](/about)
+[About BDNotes](BDNotes/about)
