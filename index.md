@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" src="/BDNotes/sass/accordion.scss">
+<link rel="stylesheet" src="/sass/accordion.css">
 
 {% include accordions.html %}
 
