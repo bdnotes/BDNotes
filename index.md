@@ -2,7 +2,7 @@
 layout: default
 ---
 <link rel="stylesheet" src="/BDNotes/sass/accordion.css">
-
+<!---
 [FCS Notes for placeholder](/CS/FCS/placeholder.txt)
 
 [ADSA Notes for placeholder](/CS/ADSA/placeholder.txt)
@@ -27,6 +27,8 @@ layout: default
 [AP World Notes for placeholder](/Humanities/AP World/placeholder.txt)
 
 [NSL Notes for placeholder](/Humanities/NSL/placeholder.txt)
+-->
 
 {% include accordions.html %}
 
+[About BDNotes](/about/)
