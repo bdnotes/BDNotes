@@ -23,7 +23,7 @@
        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
        <!-- Script for collapsing accordion-->
        <script>
-          var acc = document.getElementsByClassName("accordion");
+          /*var acc = document.getElementsByClassName("accordion");
           var i;
           
           for (i = 0; i < acc.length; i++) {
@@ -36,7 +36,12 @@
                 panel.style.maxHeight = panel.scrollHeight + "px";
               } 
             });
-          }
+          }*/
+         $(function() {
+        $(".accordion").accordion({
+         collapsible: true,
+      active: false
+      })})
         </script>
   </head>
   <body>
