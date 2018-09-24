@@ -10,6 +10,15 @@
   margin-bottom: 50;
 }
 
+.accordion:hover{
+    cursor: pointer;
+}
+
+.accordion .ui-state-focus{
+  outline: none;
+}
+
+
 // Group == heading + body
 .accordion-group {
   margin-bottom: 2px;
