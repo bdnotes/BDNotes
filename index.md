@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" src="/sass/accordion.scss">
+<link rel="stylesheet" src="/styles/accordion.scss">
 
 {% include accordions.html %}
 
