@@ -1,5 +1,5 @@
-{% for note in site.static_files%}
-    {% if note.path contains "/notes/_{{ include.class }}_Notes"}
+{% for note in site.static_files %}
+    {% if note.path contains "/notes/_{{ include.class }}_Notes" %}
         <div>{{ note.path }}</div>
     {% endif %}
 {% endfor %}
