@@ -3,4 +3,4 @@ layout: default
 ---
 
 
-{% include accordions.html %}
+{% include subjects.html %}
