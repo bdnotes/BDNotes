@@ -2,7 +2,7 @@
 .DS_Store
 
 #Visual Studio
-.vscode
+.vscode/
 
 #Jekyll
 _site
