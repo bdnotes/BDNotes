@@ -1,7 +1,7 @@
 ---
 layout: default
 title: FCS
-permalink: /FCS/
+permalink: /CS/FCS/
 ---
 
 Fundamentals of Computer Science
