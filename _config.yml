@@ -27,6 +27,3 @@ theme: jekyll-theme-cayman
 #   - ADSB_Notes
 #   - AOA_Notes
 #   - FCS_Notes
-defaults:
-  - scope:
-    path: "notes"
