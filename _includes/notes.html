@@ -1,8 +1,13 @@
-{% for note in site.static_files %}
+<!-- {% for note in site.static_files %}
     <div>{{ note.path }}</div>
     {% if note.path contains "/notes/_{{ include.class }}_Notes" %}
         <div>{{ note.path }}</div>
     {% endif %}
 {% endfor %}
 
-<div>test</div>
+<div>test</div> -->
+
+{% assign class = site.collections | where: "label", "{{ include.class }}" | first %}
+{% for note in class %}
+    <div>author: {{ note.author }}</div>
+{% endfor %}
