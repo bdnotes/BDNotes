@@ -8,11 +8,9 @@
 <div>test</div> -->
 {{ include.class }}
 test4
-{% for collection in site.collections %}
-    {{ collection.label }}
-{% endfor %}
 
 {% assign class_notes = site.collections | where: "label", "ADSA" | first %}
 {% for note in class_notes.docs %}
     <div>author: {{ note.author }}</div>
+    <div>content: {{ note.content }}</div>
 {% endfor %}
