@@ -21,9 +21,12 @@ baseurl: "/BDNotes" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 abouturl: "/BDNotes/about"
 theme: jekyll-theme-cayman
-collections_dir: notes
-collections:
-  - ADSA_Notes
-  - ADSB_Notes
-  - AOA_Notes
-  - FCS_Notes
+# collections_dir: notes
+# collections:
+#   - ADSA_Notes
+#   - ADSB_Notes
+#   - AOA_Notes
+#   - FCS_Notes
+defaults:
+  - scope:
+    path: "notes"
