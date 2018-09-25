@@ -7,6 +7,7 @@
 
 <div>test</div> -->
 {{ include.class }}
+test
 {% assign class = site.collections | where: "label", {{ include.class }} | first %}
 {{ class }}
 {% for note in class %}
