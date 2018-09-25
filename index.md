@@ -2,4 +2,4 @@
 layout: default
 ---
 
-{% include subjects.html tes%}
+{% include subjects.html %}
