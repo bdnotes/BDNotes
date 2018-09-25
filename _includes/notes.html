@@ -7,10 +7,12 @@
 
 <div>test</div> -->
 {{ include.class }}
-test6
+<div>test6</div>
 
 {% assign class_notes = site.collections | where: "label", "ADSA" | first %}
+<div>
 {% for note in class_notes.docs %}
     author: {{ note.author }}
     content: {{ note.content }}
 {% endfor %}
+</div>
