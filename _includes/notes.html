@@ -1,0 +1,5 @@
+{% for note in site.static_files%}
+    {% if note.path contains "/notes/_{{ class }}_Notes"}
+        <div>{{ note }}</div>
+    {% endif %}
+{% endfor %}
