@@ -8,9 +8,11 @@
 <div>test</div> -->
 {{ include.class }}
 test1
-{{ site.ADSA.label }}
+{% for collection in site.collections %}
+    {{ collection.label }}
+{% endfor %}
+
 {% assign class_notes = site.collections | where: "label", {{ include.class }} | first %}
-{{ class_notes }}
-{% for note in class %}
+{% for note in class_notes %}
     <div>author: {{ note.author }}</div>
 {% endfor %}
