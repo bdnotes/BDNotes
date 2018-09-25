@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FCS
-permalink: /FCS/
+title: NSL
+permalink: /Humanities/NSL/
 ---
 
 AP NSL

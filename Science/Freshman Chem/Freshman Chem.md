@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FCS
-permalink: /FCS/
+title: Freshman Chem
+permalink: /Science/Freshman Chem/
 ---
 
 Freshman Chem

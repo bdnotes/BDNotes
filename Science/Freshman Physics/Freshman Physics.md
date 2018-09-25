@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FCS
-permalink: /FCS/
+title: Freshman Physics
+permalink: /Science/Freshman Physics/
 ---
 
 Freshman Physics

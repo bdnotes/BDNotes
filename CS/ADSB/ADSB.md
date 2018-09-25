@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FCS
-permalink: /FCS/
+title: ADSB
+permalink: /CS/ADSB/
 ---
 
 Advanced Data Structures B

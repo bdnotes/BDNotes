@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FCS
-permalink: /FCS/
+title: World
+permalink: /Humanities/World/
 ---
 
 AP World

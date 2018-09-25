@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FCS
-permalink: /FCS/
+title: Sophomore Biology
+permalink: /Science/Sophomore Biology/
 ---
 
 Sophomore Biology

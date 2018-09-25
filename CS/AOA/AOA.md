@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FCS
-permalink: /FCS/
+title: AOA
+permalink: /CS/AOA/
 ---
 
 Analysis of Algorithms

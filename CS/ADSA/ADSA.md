@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FCS
-permalink: /FCS/
+title: ADSA
+permalink: /CS/ADSA/
 ---
 
 Advanced Data Structures A
