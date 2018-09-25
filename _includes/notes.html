@@ -1,11 +1,10 @@
-<div>test1</div>
-<!-- {% capture class_var %} {{ include.class }} {% endcapture class_var %} -->
 {% assign class_var = include.class %}
-<div>{{ class_var }}</div>
 {% assign class_notes = site.collections | where: "label", class_var | first %}
 <div>
 {% for note in class_notes.docs %}
-    author: {{ note.author }} <br>
-    content: {{ note.content }}
+    </div>
+        <p>author: {{ note.author }}</p>
+        <p>content: {{ note.content }}</p>
+    <div>
 {% endfor %}
 </div>
