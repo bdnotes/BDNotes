@@ -9,8 +9,17 @@
     </span>
     <span class="modal-image">
         <a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a>
-        <span class="download"><img src="/BDNotes/assets/img/download.png" width="40" height="40"></span>
-        <span class="file-type"><img src="/BDNotes/assets/img/download.png" width="40" height="40"></span>
+        <span class="download"><img src="{{ site.infoicons }}/download.png" width="40" height="40"></span>
+        <span class="file-type"><img src="
+            {% case note.type %}
+                {% when 'text' %} 
+                    {{ site.infoicons }}/text.png 
+                {% when 'pdf' %} 
+                    {{ site.infoicons }}/pdf.png
+                {% when 'img' %} 
+                    {{ site.infoicons }}/img.png
+            {% endcase %}" 
+            width="40" height="40"></span>
     </span>
 {% endfor %}
 </div>
