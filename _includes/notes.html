@@ -3,8 +3,9 @@
 <div>
 {% for note in class_notes.docs %}
     <div id="modal_{{ forloop.index }}" class="modal">
-        <p>author: {{ note.author }}</p>
-        <p>content: {{ note.content }}</p>
+        <p>Notes by <b>{{ note.author }}</b></p>
+        <hr>
+        <p>{{ note.content }}</p>
     </div>
     <p><a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}"></a></p>
 {% endfor %}
