@@ -7,9 +7,11 @@
         <hr>
         <p>{{ note.content }}</p>
     </span>
-    <span class="modal-image"><a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a></span>
-    <span class="download"><img src="/BDNotes/assets/img/download.png" width="16" height="16"></span>
-    <span class="file-type"><img src="/BDNotes/assets/img/download.png" width="16" height="16"></span>
+    <span class="modal-image">
+        <a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a>
+        <span class="download"><img src="/BDNotes/assets/img/download.png" width="16" height="16"></span>
+        <span class="file-type"><img src="/BDNotes/assets/img/download.png" width="16" height="16"></span>
+    </span>
 {% endfor %}
 </div>
 
