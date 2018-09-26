@@ -4,4 +4,4 @@ title: AOA
 permalink: /CS/AOA/
 ---
 
-Analysis of Algorithms
+{% include notes.html class="AOA" %}

@@ -4,4 +4,4 @@ title: ADSB
 permalink: /CS/ADSB/
 ---
 
-Advanced Data Structures B
+{% include notes.html class="ADSB" %}
