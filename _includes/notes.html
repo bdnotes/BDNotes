@@ -7,6 +7,6 @@
         <hr>
         <p>{{ note.content }}</p>
     </div>
-    <p><a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="100" height="100"></a></p>
+    <p><a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a></p>
 {% endfor %}
 </div>
