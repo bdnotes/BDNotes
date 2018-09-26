@@ -8,12 +8,14 @@
         <a href="#" rel="modal:close">Close</a>
     </div>
     <p><a href="#modal_{{ forloop.index }}" rel="modal:open">Test</a></p> -->
-    
-    <div id="modal_1" class="modal">
-        <p>author: {{ note.author }}</p>
-        <p>content: {{ note.content }}</p>
-        <a href="#" rel="modal:close">Close</a>
-    </div>
-    <p><a href="#modal_1" rel="modal:open">Test</a></p>
 {% endfor %}
 </div>
+
+<!-- Modal HTML embedded directly into document -->
+<div id="ex1" class="modal">
+    <p>Thanks for clicking. That felt good.</p>
+    <a href="#" rel="modal:close">Close</a>
+</div>
+      
+ <!-- Link to open the modal -->
+<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
