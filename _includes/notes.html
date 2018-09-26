@@ -8,12 +8,20 @@
         <p>{{ note.content }}</p>
     </span>
     <span class="modal-image"><a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a></span>
-
+    <span class="download"><img src="/BDNotes/assets/img/download.png" width="16" height="16"></span>
+    <span class="file-type"><img src="/BDNotes/assets/img/download.png" width="16" height="16"></span>
 {% endfor %}
 </div>
 
+
 <style>
     .modal-image {
-        padding-right: 30px;
+        padding-right: 60px;
+    }
+    .download {
+        margin-bottom: 100px;
+    }
+    .file-type {
+        margin-bottom: 50px;
     }
 </style>
