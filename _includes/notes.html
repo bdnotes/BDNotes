@@ -7,6 +7,13 @@
         <hr>
         <p>{{ note.content }}</p>
     </span>
-    <span><a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a></span>
+    <span class="modal-image"><a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a></span>
+
 {% endfor %}
 </div>
+
+<style>
+    .modal-image {
+        padding-left: 100px;
+    }
+</style>
