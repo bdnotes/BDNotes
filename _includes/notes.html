@@ -7,6 +7,6 @@
         <p>content: {{ note.content }}</p>
         <a href="#" rel="modal:close">Close</a>
     </div>
-    <p><a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ site.baseurl }}/assets/img/ss.png"></a></p>
+    <p><a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}"></a></p>
 {% endfor %}
 </div>
