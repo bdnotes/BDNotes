@@ -2,9 +2,11 @@
 {% assign class_notes = site.collections | where: "label", class_var | first %}
 <div>
 {% for note in class_notes.docs %}
-    <div>
+    <div id="{{ forloop.index }}" class="modal">
         <p>author: {{ note.author }}</p>
         <p>content: {{ note.content }}</p>
+        <a href="#" rel="modal:close">Close</a>
     </div>
+    <p><a href="#{{ forloop.index }}" rel="modal:open">Open Modal</a>test</p>
 {% endfor %}
 </div>
