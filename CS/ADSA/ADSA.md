@@ -4,4 +4,4 @@ title: ADSA
 permalink: /CS/ADSA/
 ---
 
-{% include notes.html class="ADSA" %}
+Advanced Data Structures A
