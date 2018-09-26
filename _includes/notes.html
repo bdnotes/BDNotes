@@ -2,20 +2,11 @@
 {% assign class_notes = site.collections | where: "label", class_var | first %}
 <div>
 {% for note in class_notes.docs %}
-    <!-- <div id="modal_{{ forloop.index }}" class="modal">
+    <div id="modal_{{ forloop.index }}" class="modal">
         <p>author: {{ note.author }}</p>
         <p>content: {{ note.content }}</p>
         <a href="#" rel="modal:close">Close</a>
     </div>
-    <p><a href="#modal_{{ forloop.index }}" rel="modal:open">Test</a></p> -->
+    <p><a href="#modal_{{ forloop.index }}" rel="modal:open">Test</a></p>
 {% endfor %}
 </div>
-
-<!-- Modal HTML embedded directly into document -->
-<div id="ex1" class="modal">
-    <p>Thanks for clicking. That felt good.</p>
-    <a href="#ex1" rel="modal:close">Close</a>
-</div>
-      
- <!-- Link to open the modal -->
-<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
