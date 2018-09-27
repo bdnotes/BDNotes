@@ -4,7 +4,7 @@
 {% if class_notes.docs.size == 0 or class_notes == nil %}
     <p>This class doesn't have any notes right now! Maybe try <a href="{{site.uploadurl}}">uploading your own?</a></p>
 {% endif %}
-{% assign sorted = (class_notes | sort: 'lecture_date') | reverse %}
+{% assign sorted = class_notes | sort: 'lecture_date' %}
 {% for note in sorted.docs %}
     <span id="modal_{{forloop.index}}" class="modal">
         <p>Notes by <b>{{note.author}}</b></p>
