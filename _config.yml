@@ -26,7 +26,11 @@ infoicons: /BDNotes/assets/img
 theme: jekyll-theme-cayman
 collections_dir: notes
 collections:
-  - ADSA
-  - ADSB
-  - AOA
-  - FCS
+  ADSA:
+    output: true
+  ADSB:
+    output: true
+  AOA:
+    output: true
+  FCS:
+    output: true
