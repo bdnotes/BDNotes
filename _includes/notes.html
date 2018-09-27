@@ -22,15 +22,17 @@
             
             <div class="accordion">
             <h3>{{note.title}} (Lecture {{note.lecture_number}})</h3>
-
+            <div>
         {% endif %}
         
         
         {% if number != note.lecture_number %}
             {% assign number = note.lecture_number %}
-            </div>
+            </div> <!--close inner accordion div which we wrap to have all the spans collapse-->
+            </div> <!--close outer accordion div-->
             <div class="accordion">
             <h3>{{note.title}} (Lecture {{note.lecture_number}})</h3>
+            <div>
         {% endif %}
 
 
@@ -57,6 +59,7 @@
             </span>
 
     {% endfor %}
+    </div>
     </div>
 {% endif %}
 
