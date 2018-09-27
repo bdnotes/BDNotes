@@ -4,4 +4,4 @@ title: World
 permalink: /Humanities/World/
 ---
 
-AP World
+{% include notes.html class="World" %}

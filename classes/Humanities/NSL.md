@@ -4,4 +4,4 @@ title: NSL
 permalink: /Humanities/NSL/
 ---
 
-AP NSL
+{% include notes.html class="NSL" %}

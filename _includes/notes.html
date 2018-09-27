@@ -1,32 +1,79 @@
 {% assign class_var = include.class %}
 {% assign class_notes = site.collections | where: "label", class_var | first %}
+
 <div>
-{% for note in class_notes.docs %}
-    <span id="modal_{{ forloop.index }}" class="modal">
-        <p>Notes by <b>{{ note.author }}</b></p>
-        <hr>
-        <p>{{ note.content }}</p>
-    </span>
-    <span class="modal-image">
-        <a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a>
-        <span class="download"><img src="/BDNotes/assets/img/download.png" width="40" height="40"></span>
-        <span class="file-type"><img src="/BDNotes/assets/img/download.png" width="40" height="40"></span>
-    </span>
-{% endfor %}
+{% if class_notes.docs.size == 0 or class_notes == nil %}
+    <p>This class doesn't have any notes right now! Maybe try <a href="{{site.uploadurl}}">uploading your own?</a></p>
+{% else %}
+    {% assign sorted = class_notes.docs | sort: "lecture_number" | reverse %}
+    {% for note in sorted %}
+        <span id="modal_{{forloop.index}}" class="modal">
+            <p>Notes by <b>{{note.author}}</b></p>
+            <hr>
+            <p>{{note.content}}</p>
+        </span>
+
+        <div class="accordion">
+            <h3>{{note.title}} (Lecture {{note.lecture_number}})</h3>
+            <span class="modal-image">
+                <a href="#modal_{{forloop.index}}" rel="modal:open">
+                    <img src="/BDNotes/assets/notes/{{note.class}}/{{note.title}}/{{note.author}}/thumb.png" width="{{site.thumbnailsize}}" height="{{site.thumbnailsize}}">
+                </a>
+                <span class="download">
+                    <a href="/BDNotes/assets/notes/{{note.class}}/{{note.title}}/{{note.author}}/{{note.title}}.zip" download>
+                        <img src="{{site.infoicons}}/download.png" width="40" height="40">
+                    </a>
+                </span>
+                <span class="file-type"><img src="
+                    {% case note.type %}
+                        {% when 'text' %} 
+                            {{site.infoicons}}/text.png 
+                        {% when 'pdf' %} 
+                            {{site.infoicons}}/pdf.png
+                        {% when 'img' %} 
+                            {{site.infoicons}}/img.png
+                    {% endcase %}"
+                width="40" height="40"></span>
+            </span>
+        </div>
+    {% endfor %}
+{% endif %}
+
 </div>
 
-
 <style>
+
+    .accordion:hover{
+        cursor:default;
+    }
+
+    .accordion h3:hover{
+        cursor: pointer;
+    }
+
     .modal-image {
         padding-right: 30px;
+        /* padding-bottom: 20px; */
     }
+
+    .modal-image a:hover{
+        text-decoration: none;
+    }
+
     .download {
         position: relative;
         bottom: 60px;
     }
+    
+    .download a:hover{
+        text-decoration: none;
+    }
+
     .file-type {
         position: relative;
         bottom: 10px;
         right: 44px;
     }
+
+    
 </style>

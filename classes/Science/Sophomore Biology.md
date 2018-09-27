@@ -4,4 +4,4 @@ title: Sophomore Biology
 permalink: /Science/Sophomore Biology/
 ---
 
-Sophomore Biology
+{% include notes.html class="Sophomore Biology" %}

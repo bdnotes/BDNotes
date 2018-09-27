@@ -1,10 +1,14 @@
-#Mac
+# Mac
 .DS_Store
 
-#Visual Studio
+# Visual Studio
 .vscode/settings.json
 
-#Jekyll
+# Jekyll
 _site
 .sass-cache
 .jekyll-metadata
+
+# Ruby
+Gemfile
+Gemfile.lock

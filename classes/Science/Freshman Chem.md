@@ -4,4 +4,4 @@ title: Freshman Chem
 permalink: /Science/Freshman Chem/
 ---
 
-Freshman Chem
+{% include notes.html class="Freshman Chem" %}
