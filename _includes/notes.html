@@ -13,7 +13,9 @@
         <span class="modal-image">
             <a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a>
             <span class="download">
-                <img onclick="download('{{ note.path }}')" src="{{ site.infoicons }}/download.png" width="40" height="40">
+                <a href="{{ site.baseurl }}/notes/{{ note.relative_path }}" download>
+                    <img src="{{ site.infoicons }}/download.png" width="40" height="40" onclick="download({{ note.content }})">
+                </a>
             </span>
             <span class="file-type"><img src="
                 {% case note.type %}
@@ -29,17 +31,6 @@
     {% endfor %}
 {% endif %}
 </div>
-
-<script>
-// Dirty download script for non hosted urls
-function download(data) {
-    alert(data);
-//     var MIME_TYPE = "text/plain";
-
-//     var blob = new Blob([data], {type: MIME_TYPE});
-//     window.location.href = window.URL.createObjectURL(blob);
-}
-</script>
 
 
 <style>
