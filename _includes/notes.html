@@ -11,10 +11,11 @@
             <p>{{ note.content }}</p>
         </span>
         <span class="modal-image">
-            <a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a>
+            <a href="#modal_{{ forloop.index }}" rel="modal:open">
+                <img src="/BDNotes/assets/notes/{{note.class}}/{{note.title}}/{{note.author}}/thumb.png" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}">
+            </a>
             <span class="download">
-                <!-- <a href="{{ site.baseurl }}/notes/{{ note.relative_path }}" download> -->
-                <a href="/BDNotes/notes/ADSA/test.txt/" download>
+                <a href="/BDNotes/assets/notes/{{note.class}}/{{note.title}}/{{note.author}}/{{note.title}}.zip/" download>
                     <img src="{{ site.infoicons }}/download.png" width="40" height="40">
                 </a>
             </span>
@@ -32,7 +33,6 @@
     {% endfor %}
 {% endif %}
 </div>
-
 
 <style>
     .modal-image {

@@ -25,6 +25,13 @@ thumbnailsize: "100"
 infoicons: /BDNotes/assets/img
 theme: jekyll-theme-cayman
 collections_dir: notes
+lectures:
+  adsa:
+    - test lecture 1
+    - testing lecturer 2
+  adsb:
+    - this is a test 1
+    - this's not a test 2
 collections:
   ADSA:
     output: true
