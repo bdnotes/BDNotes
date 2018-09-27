@@ -1,6 +1,6 @@
 {% assign class_var = include.class %}
 {% assign class_notes = site.collections | where: "label", class_var | first %}
-{% assign sorted = (class_notes | sort: "lecture_date") %}
+{% assign sorted = (class_notes.docs | sort:"lecture_date" %}
 
 <div>
 {% if class_notes.docs.size == 0 or class_notes == nil %}
