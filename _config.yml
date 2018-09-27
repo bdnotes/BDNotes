@@ -28,9 +28,13 @@ collections_dir: notes
 collections:
   ADSA:
     output: true
+    permalink: /notes/ADSA/:path/
   ADSB:
     output: true
+    permalink: /notes/ADSB/:path/
   AOA:
     output: true
+    permalink: /notes/AOA/:path/
   FCS:
     output: true
+    permalink: /notes/FCS/:path/
