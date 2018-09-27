@@ -13,8 +13,8 @@
         <span class="modal-image">
             <a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a>
             <span class="download">
-                <a href="{{ note.relative_path }}" download> <!-- download the file -->
-                    <img src="{{ site.infoicons }}/download.png" width="40" height="40">
+                <a href="{{ note.relative_path }}" download>
+                    <img src="{{ site.infoicons }}/download.png" width="40" height="40" onclick="download({{ note.content }})">
                 </a>
             </span>
             <span class="file-type"><img src="
@@ -25,12 +25,22 @@
                         {{ site.infoicons }}/pdf.png
                     {% when 'img' %} 
                         {{ site.infoicons }}/img.png
-                {% endcase %}" 
+                {% endcase %}"
                 width="40" height="40"></span>
         </span>
     {% endfor %}
 {% endif %}
 </div>
+
+<script>
+// Dirty download script for non hosted urls
+function download(data) {
+    var MIME_TYPE = "text/plain";
+
+    var blob = new Blob([data], {type: MIME_TYPE});
+    window.location.href = window.URL.createObjectURL(blob);
+}
+</script>
 
 
 <style>
