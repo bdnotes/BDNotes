@@ -1,27 +1,31 @@
 {% assign class_var = include.class %}
 {% assign class_notes = site.collections | where: "label", class_var | first %}
 <div>
-{% for note in class_notes.docs %}
-    <span id="modal_{{ forloop.index }}" class="modal">
-        <p>Notes by <b>{{ note.author }}</b></p>
-        <hr>
-        <p>{{ note.content }}</p>
-    </span>
-    <span class="modal-image">
-        <a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a>
-        <span class="download"><img src="{{ site.infoicons }}/download.png" width="40" height="40"></span>
-        <span class="file-type"><img src="
-            {% case note.type %}
-                {% when 'text' %} 
-                    {{ site.infoicons }}/text.png 
-                {% when 'pdf' %} 
-                    {{ site.infoicons }}/pdf.png
-                {% when 'img' %} 
-                    {{ site.infoicons }}/img.png
-            {% endcase %}" 
-            width="40" height="40"></span>
-    </span>
-{% endfor %}
+{% if class_notes.docs.size == 0}
+    <p>This class doesn't have any notes currently! Maybe try <a href="{{ site.uploadurl }}">uploading your own?</a></p>
+{% else %}
+    {% for note in class_notes.docs %}
+        <span id="modal_{{ forloop.index }}" class="modal">
+            <p>Notes by <b>{{ note.author }}</b></p>
+            <hr>
+            <p>{{ note.content }}</p>
+        </span>
+        <span class="modal-image">
+            <a href="#modal_{{ forloop.index }}" rel="modal:open"><img src="{{ note.imgurl }}" width="{{ site.thumbnailsize }}" height="{{ site.thumbnailsize }}"></a>
+            <span class="download"><img src="{{ site.infoicons }}/download.png" width="40" height="40"></span>
+            <span class="file-type"><img src="
+                {% case note.type %}
+                    {% when 'text' %} 
+                        {{ site.infoicons }}/text.png 
+                    {% when 'pdf' %} 
+                        {{ site.infoicons }}/pdf.png
+                    {% when 'img' %} 
+                        {{ site.infoicons }}/img.png
+                {% endcase %}" 
+                width="40" height="40"></span>
+        </span>
+    {% endfor %}
+{% endif %}
 </div>
 
 
