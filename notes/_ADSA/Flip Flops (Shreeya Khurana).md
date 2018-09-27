@@ -2,7 +2,7 @@
 class: ADSA
 title: Flip Flops
 author: Shreeya Khurana
-lecture_date: 8/24/2016
+lecture_number: 1
 type: img
 ---
 # Flip flops

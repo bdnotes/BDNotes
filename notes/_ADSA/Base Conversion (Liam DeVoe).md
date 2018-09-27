@@ -2,7 +2,7 @@
 class: ADSA
 title: Base Conversion
 author: Liam DeVoe
-lecture_date: 8/18/2016
+lecture_number: 2
 type: pdf
 ---
 # Base Conversion
