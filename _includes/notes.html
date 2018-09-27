@@ -12,7 +12,7 @@
     </span>
 
     <div class="accordion">
-        <h3>{{note.title}}</h3>
+        <h3>{{note.title}} ({{note.lecture_date}})</h3>
         <span class="modal-image">
             <a href="#modal_{{forloop.index}}" rel="modal:open">
                 <img src="/BDNotes/assets/notes/{{note.class}}/{{note.title}}/{{note.author}}/thumb.png" width="{{site.thumbnailsize}}" height="{{site.thumbnailsize}}">
@@ -42,7 +42,7 @@
     .accordion:hover{
         cursor:default;
     }
-    
+
     .accordion h3:hover{
         cursor: pointer;
     }
