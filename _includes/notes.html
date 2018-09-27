@@ -6,15 +6,37 @@
     <p>This class doesn't have any notes right now! Maybe try <a href="{{site.uploadurl}}">uploading your own?</a></p>
 {% else %}
     {% assign sorted = class_notes.docs | sort: "lecture_number" | reverse %}
+
+   
     {% for note in sorted %}
         <span id="modal_{{forloop.index}}" class="modal">
-            <p>Notes by <b>{{note.author}}</b></p>
-            <hr>
-            <p>{{note.content}}</p>
+                <p>Notes by <b>{{note.author}}</b></p>
+                <hr>
+                <p>{{note.content}}</p>
         </span>
-
-        <div class="accordion">
+    {% endfor %}
+        
+    {% for note in sorted %}
+        {% if forloop.first == true %}
+            {% assign number = note.lecture_number %}
+            
+            <div class="accordion">
             <h3>{{note.title}} (Lecture {{note.lecture_number}})</h3>
+            <div>
+        {% endif %}
+        
+        
+        {% if number != note.lecture_number %}
+            {% assign number = note.lecture_number %}
+            </div> <!--close inner accordion div which we wrap to have all the spans collapse-->
+            </div> <!--close outer accordion div-->
+            <div class="accordion">
+            <h3>{{note.title}} (Lecture {{note.lecture_number}})</h3>
+            <div>
+        {% endif %}
+
+
+            
             <span class="modal-image">
                 <a href="#modal_{{forloop.index}}" rel="modal:open">
                     <img src="/BDNotes/assets/notes/{{note.class}}/{{note.title}}/{{note.author}}/thumb.png" width="{{site.thumbnailsize}}" height="{{site.thumbnailsize}}">
@@ -35,8 +57,10 @@
                     {% endcase %}"
                 width="40" height="40"></span>
             </span>
-        </div>
+
     {% endfor %}
+    </div>
+    </div>
 {% endif %}
 
 </div>

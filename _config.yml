@@ -25,23 +25,19 @@ thumbnailsize: "100"
 infoicons: /BDNotes/assets/infoicons
 theme: jekyll-theme-cayman
 collections_dir: notes
-lectures:
-  adsa:
-    - test lecture 1
-    - testing lecturer 2
-  adsb:
-    - this is a test 1
-    - this's not a test 2
+# lectures:
+#   adsa:
+#     - test lecture 1
+#     - testing lecturer 2
+#   adsb:
+#     - this is a test 1
+#     - this's not a test 2
 collections:
   ADSA:
     output: true
-    permalink: /notes/ADSA/:path.txt/
   ADSB:
     output: true
-    permalink: /notes/ADSB/:path/
   AOA:
     output: true
-    permalink: /notes/AOA/:path/
   FCS:
     output: true
-    permalink: /notes/FCS/:path/
