@@ -28,7 +28,7 @@ collections_dir: notes
 collections:
   ADSA:
     output: true
-    permalink: /notes/ADSA/:path/
+    permalink: /notes/ADSA/:path.txt/
   ADSB:
     output: true
     permalink: /notes/ADSB/:path/
