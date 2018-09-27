@@ -2,7 +2,7 @@
 {% assign class_notes = site.collections | where: "label", class_var | first %}
 <div>
 {% if class_notes.docs.size == 0 or class_notes == nil %}
-    <p>This class doesn't have any notes currently! Maybe try <a href="{{ site.uploadurl }}">uploading your own?</a></p>
+    <p>This class doesn't have any notes right now! Maybe try <a href="{{ site.uploadurl }}">uploading your own?</a></p>
 {% else %}
     {% for note in class_notes.docs %}
         <span id="modal_{{ forloop.index }}" class="modal">
