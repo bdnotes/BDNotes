@@ -33,11 +33,7 @@ collections_dir: notes
 #     - this is a test 1
 #     - this's not a test 2
 collections:
-  ADSA:
-    output: true
-  ADSB:
-    output: true
-  AOA:
-    output: true
-  FCS:
-    output: true
+  - ADSA
+  - ADSB
+  - AOA
+  - FCS
