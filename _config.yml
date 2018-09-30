@@ -22,7 +22,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 abouturl: "/BDNotes/about"
 uploadurl: "/BDNotes/github"
 thumbnailsize: "100"
-infoicons: /BDNotes/assets/infoicons
+icons: /BDNotes/assets/icons
 theme: jekyll-theme-cayman
 collections_dir: notes
 # lectures:

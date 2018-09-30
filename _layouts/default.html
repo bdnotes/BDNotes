@@ -18,6 +18,9 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+    <link rel="shortcut icon" type="image/png" href="{{site.icons}}/favicon.png">﻿
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -37,7 +40,7 @@
   </head>
   <body>
     <header class="page-header" role="banner">
-      <h1 class="project-name"><a href="{{ site.baseurl }}/">{{ site.title | default: site.github.repository_name }}</a></h1>
+      <h1 class="project-name"><a href="{{ site.baseurl }}/"><img src="{{site.icons}}/logo.png" width="537" height="166"></a></h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
