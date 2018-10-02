@@ -3,8 +3,10 @@ layout: default
 title: About
 permalink: /about/
 ---
-Welcome to BDNotes, the Blair Discord Notes Repository!
+This site was designed by magnets, for magnets, to enable easier note sharing across years and generations of students.
 
-This site was created and is maintained by members of the [Blair Discord](https://discord.gg/RVR98UW).
+Created by: Liam DeVoe, Simon Chervenak, Hersh Kumar
+
+Logo and Favicon by: Adam Levav
 
 *This site is currently under construction. See [our github](https://github.com/bdnotes/BDNotes) for progress and contributors.*
