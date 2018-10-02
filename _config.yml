@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/BDNotes" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 abouturl: "/BDNotes/about"
-uploadurl: "/BDNotes/github"
+uploadurl: "/BDNotes/upload"
 thumbnailsize: "100"
 icons: /BDNotes/assets/icons
 theme: jekyll-theme-cayman

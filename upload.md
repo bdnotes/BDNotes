@@ -1,0 +1,4 @@
+---
+permalink: /upload/
+layout: default
+---
