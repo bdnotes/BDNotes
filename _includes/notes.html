@@ -27,6 +27,7 @@
         
         
         {% if number != note.lecture_number %} <!--keep notes about the same lecture together-->
+
             {% assign number = note.lecture_number %}
             </div> <!--close inner accordion div which we wrap to have all the spans collapse-->
             </div> <!--close outer accordion div-->
