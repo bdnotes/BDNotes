@@ -26,7 +26,8 @@
         {% endif %}
         
         
-        {% if number != note.lecture_number %}
+        {% if number != note.lecture_number %} <!--keep notes about the same lecture together-->
+
             {% assign number = note.lecture_number %}
             </div> <!--close inner accordion div which we wrap to have all the spans collapse-->
             </div> <!--close outer accordion div-->
@@ -43,17 +44,17 @@
                 </a>
                 <span class="download">
                     <a href="/BDNotes/assets/notes/{{note.class}}/{{note.title}}/{{note.author}}/{{note.title}}.zip" download>
-                        <img src="{{site.infoicons}}/download.png" width="40" height="40">
+                        <img src="{{site.icons}}/download.png" width="40" height="40">
                     </a>
                 </span>
                 <span class="file-type"><img src="
                     {% case note.type %}
                         {% when 'text' %} 
-                            {{site.infoicons}}/text.png 
+                            {{site.icons}}/text.png 
                         {% when 'pdf' %} 
-                            {{site.infoicons}}/pdf.png
+                            {{site.icons}}/pdf.png
                         {% when 'img' %} 
-                            {{site.infoicons}}/img.png
+                            {{site.icons}}/img.png
                     {% endcase %}"
                 width="40" height="40"></span>
             </span>
