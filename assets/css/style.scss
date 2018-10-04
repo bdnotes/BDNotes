@@ -3,6 +3,13 @@
 
 $body-link-color: #17aded;
 @import "{{ site.theme }}";
-// .project-name a
-// {
-// }
+.page-header {
+    color: $header-heading-color;
+    text-align: center;
+    background-color: $header-bg-color;
+    background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  
+    @include large {
+      padding: 2rem 2rem;
+    }
+  }
