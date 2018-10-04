@@ -8,12 +8,12 @@ There are classes available for the core magnet curriculum (ie, magnet only clas
 To request an addition to the class list, report a broken link on the site, or leave feedback, you can either open an issue here on github or email us at blairdiscordnotes@gmail.com.
 
 ## Credits
-### Created by
+#### Created by
 * Liam DeVoe
 * Simon Chervenak
 * Hersh Kumar
 
-### Current Mantainers
+#### Current Mantainers
 * Liam Devoe
 * Simon Chervenak
 * Hersh Kumar
