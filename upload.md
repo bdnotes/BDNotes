@@ -1,7 +1,9 @@
 ---
 permalink: /upload/
-layout: default
+layout: upload
 ---
+
+<!-- 
 
 <form>
     First Name: <input type="text">
@@ -28,4 +30,4 @@ layout: default
     <br>
     
     
-</form>
+</form> -->

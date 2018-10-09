@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<!-- Adapted from https://www.sanwebe.com/2014/08/css-html-forms-designs -->
+<form>
+    <ul class="form-style">
+        <li><label>Full Name <span class="required">*</span></label>
+            <input type="text" class="field-divided" placeholder="First" />&nbsp;<input type="text"  class="field-divided" placeholder="Last" />
+        </li>
+
+        <li>
+            <label>Class <span class="required">*</span></label>
+            <select class="field-select">
+                <option>Choose One</option>
+                <option>AOA</option>
+                <option>Lin Alg</option>
+            </select>
+        </li>
+        <li>
+            <label>Lecture Name <span class="required">*</span></label>
+            <select class="field-select">
+                <option>Choose One</option>
+                <option>Base Conversion</option>
+                <option>Flip Flops</option>
+            </select>
+        </li>
+        <li>
+            <label>Upload Notes <span class="required">*</span></label>
+            <textarea id="field5" class="field-long field-textarea"></textarea>
+        </li>
+        <li>
+            <input type="submit" value="Submit" />
+        </li>
+    </ul>
+</form>
+
+{{ content }}
