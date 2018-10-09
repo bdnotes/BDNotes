@@ -2,6 +2,9 @@
 ---
 
 $body-link-color: #17aded;
+$header-bg-color: #2a89d2 !default;
+$header-bg-color-secondary: #175899 !default;
+
 @import "{{ site.theme }}";
 .page-header {
     color: $header-heading-color;
