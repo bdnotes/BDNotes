@@ -26,7 +26,7 @@ layout: default
         </li>
         <li>
             <div class="upload-btn-wrapper">
-                <button class="upload-btn">Upload Your Notes</button>
+                <button class="upload-btn">Upload Your Notes Here!</button>
                 <input type="file" required multiple accept=".png, .pdf, .txt, .docx, .jpeg" data-multiple-caption="{count} notes selected" id="input"/>
             </div>
         </li>
@@ -46,8 +46,10 @@ Array.prototype.forEach.call(inputs, function(input)
 	{
 		if(this.files.length > 1){
 			label.innerHTML = this.getAttribute('data-multiple-caption').replace('{count}', this.files.length);
-        } else {
+        } else if(this.files.length == 1){
             label.innerHTML = "1 note selected";
+        } else {
+            label.innerHTML = "No notes selected";
         }
 	});
 });
