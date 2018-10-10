@@ -25,13 +25,32 @@ layout: default
             </select>
         </li>
         <li>
-            <label>Upload Notes <span class="required">*</span></label>
-            <textarea id="field5" class="field-long field-textarea"></textarea>
+            <div class="upload-btn-wrapper">
+                <button class="upload-btn">Upload Your Notes</button>
+                <input type="file" required multiple accept=".png, .pdf, .txt, .docx, .jpeg" data-multiple-caption="{count} notes selected" id="input"/>
+            </div>
         </li>
         <li>
             <input type="submit" value="Submit" />
         </li>
     </ul>
 </form>
+
+<script>
+// Heavily adapted from https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
+var inputs = document.querySelectorAll('#input');
+Array.prototype.forEach.call(inputs, function(input)
+{
+	var label = input.previousElementSibling;
+	input.addEventListener('change', function(e)
+	{
+		if(this.files.length > 1){
+			label.innerHTML = this.getAttribute('data-multiple-caption').replace('{count}', this.files.length);
+        } else {
+            label.innerHTML = "1 note selected";
+        }
+	});
+});
+</script>
 
 {{ content }}

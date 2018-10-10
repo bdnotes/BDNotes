@@ -63,9 +63,6 @@ select{
 .form-style .field-select{
     width: 100%;
 }
-.form-style .field-textarea{
-    height: 100px;
-}
 .form-style input[type=submit], .form-style input[type=button]{
     background: #4B99AD;
     padding: 8px 15px 8px 15px;
@@ -80,4 +77,31 @@ select{
 }
 .form-style .required{
     color:red;
+}
+
+
+/* v --- https://blog.benestudio.co/custom-file-upload-button-with-pure-css-5aacf39aa0a ---- v */
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .upload-btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
 }
