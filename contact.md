@@ -13,7 +13,7 @@ Do you want one of your notes taken down for personal reasons? Are you a teacher
 Please email us! Anything private should not be posted as an issue on github.
 
 ### Contact
-To warp it up;
+To wrap it up;
 
 * Issues/Suggestions: [open a github issue](https://github.com/bdnotes/BDNotes/issues/new)
 * Personal/No github account: [email us](mailto:{{site.email}})
