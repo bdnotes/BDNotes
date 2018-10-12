@@ -5,12 +5,13 @@ layout: default
 <form>
     <ul class="form-style">
         <li><label>Full Name <span class="required">*</span></label>
-            <input type="text" class="field-divided" placeholder="First" required/>&nbsp;<input type="text"  class="field-divided" placeholder="Last" required/>
+            <input type="text" class="field-divided" placeholder="First" required/>&nbsp;
+            <input type="text" class="field-divided" placeholder="Last" required/>
         </li>
 
         <li>
             <label>Class <span class="required">*</span></label>
-            <select class="field-select">
+            <select id="class" class="field-select">
                 <option>Choose One</option>
                 <option>AOA</option>
                 <option>Lin Alg</option>
@@ -18,16 +19,14 @@ layout: default
         </li>
         <li>
             <label>Lecture Name <span class="required">*</span></label>
-            <select class="field-select">
-                <option>Choose One</option>
-                <option>Base Conversion</option>
-                <option>Flip Flops</option>
+            <select id="lecture" class="field-select">
+
             </select>
         </li>
         <li>
             <div class="upload-btn-wrapper">
                 <button class="upload-btn">Upload Notes Here</button>
-                <input type="file" required multiple accept=".png, .pdf, .txt, .docx, .jpeg" data-multiple-caption="{count} notes selected" id="input"/>
+                <input type="file" required multiple accept=".png, .pdf, .txt, .docx, .jpeg" caption="{count} notes selected" id="input"/>
             </div>
         </li>
         <li>
@@ -45,7 +44,7 @@ Array.prototype.forEach.call(inputs, function(input)
 	input.addEventListener('change', function(e)
 	{
 		if(this.files.length > 1){
-			label.innerHTML = this.getAttribute('data-multiple-caption').replace('{count}', this.files.length);
+			label.innerHTML = this.getAttribute('caption').replace('{count}', this.files.length);
         } else if(this.files.length == 1){
             label.innerHTML = "1 note selected";
         } else {
@@ -53,6 +52,23 @@ Array.prototype.forEach.call(inputs, function(input)
         }
 	});
 });
+
+$("#class").change(function() {
+    var _class = $(this).val(); // javascript gey and doesn't like `class`
+    var html = "";
+    for(lecture in lectures[_class]){
+        html += "<option>" + lectures[_class][lecture] + "</option>\n"; // for loop returns an index for lecture isntead of actual list values :(
+    }
+    $("#lecture").html(html);
+
+});
+
+
+var lectures = {
+    "AOA": ["Base Conversion", "Flip Flops"],
+    "Lin Alg": ["Linear Independence", "Linear Span"]
+};
+
 </script>
 
 {{ content }}
