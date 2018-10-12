@@ -13,6 +13,6 @@ $header-bg-color-secondary: #175899 !default;
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
   
     @include large {
-      padding: 2rem 2rem;
+      padding: 1.25rem; // decrease banner height from default
     }
   }
